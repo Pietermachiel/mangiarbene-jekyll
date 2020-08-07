@@ -1,28 +1,29 @@
 ---
 layout: page
 title: home
-dishes: 
-- starter
-- aside
-- main
-- desert
-- basics
+dishes:
+  - starter
+  - aside
+  - main
+  - desert
+  - basics
 quote: Science in the Kitchen and the Art of Eating Well
 ---
 
 {%- capture numberOfBooks -%}
 {%- assign books = site.books | sort: "index" -%}
 {%- for book in books -%}
-    {% if forloop.last %}{{ forloop.index }}{% endif %}
+{% if forloop.last %}{{ forloop.index }}{% endif %}
 {%- endfor -%}
 {%- endcapture -%}
 
 {%- capture numberOfRecipes -%}
 {%- assign recipes = site.recipes | sort: "index" -%}
 {%- for recipe in recipes -%}
-    {% if forloop.last %}{{ recipe.index }}{% endif %}
+{% if forloop.last %}{{ recipe.index }}{% endif %}
 {%- endfor -%}
 {%- endcapture -%}
+
 <div class="home-img_artisjok">
     <img src="/img/artisjok_klein.jpg" alt="">
     <div class="theart">
@@ -40,6 +41,55 @@ quote: Science in the Kitchen and the Art of Eating Well
     </p>
 </div>
 <hr>
+<br>
+<h3 class="blauw">Note to the reader – <span class="smaller">Jekyll version</span></h3>
+<div class="blog-post kramdown">
+    <blockquote>
+        <p> This website demonstrates Jekyll as API endpoint, accompaning <a href="https://jekyllconf.com/" target="_blank" rel="noopener noreferrer" aria-label="api.roozen.nl">JekyllConf2019</a> on this issue.
+        The content in <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer" aria-label="api.roozen.nl">Jekyll</a> is to be conciderate as fake, exept for the <a href="/development/2019/09/16/jekyll-api-endpoint-demo.html" aria-label="Last post">
+            latest post</a>, which contains the explanation of the demo.. 
+        The fake <strong>recipe</strong> and <strong>book</strong> markup documents are stored as objects as well and made available as REST api endpoints.
+        In Jekyll endpoints it is only possible to use the GET
+            request, which makes sense because Jekyll is a static website
+            generator in the first place. 
+        Consequently there are no dynamic endpoints available, and therefore no possiblilty to change the content this way.
+    </p>
+       </blockquote>
+    <blockquote>
+          <p>
+            The API endpoints are beiing consumed in a different
+            <a
+              href="https://reactjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="api.roozen.nl"
+            >
+              Reactjs
+            </a>
+            application. As you will experience and to demonstrate the working
+            and purpose of the Jekyll API endpoints this
+            <strong>MangiarBene Jekyll</strong> website is designed almost
+            exactly the same way as the
+            <strong>
+              <a
+                href="https://mangiarbene.roozen.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="mangiarbene.roozen.nl"
+              >
+                MangiarBene React
+              </a>
+            </strong>
+            website.
+          </p>
+        </blockquote>
+    <blockquote>
+        <p>You will find the explanation of the project in the <a href="/development/2019/09/16/jekyll-api-endpoint-demo.html" aria-label="Last post">
+    latest post</a>.</p>
+    
+</blockquote>
+</div>
+
 <p style="margin-bottom: 2em;"></p>
 <!-- latest post -->
 <p class="pl-2em">latest post</p>
@@ -80,7 +130,6 @@ quote: Science in the Kitchen and the Art of Eating Well
     {%- endif -%}
 {%- endfor -%}
 
-
 </div>
 <!-- book of the day -->
 <p class="pl-2em">book of the day</p>
@@ -120,4 +169,3 @@ quote: Science in the Kitchen and the Art of Eating Well
 <a href="https://api.roozen.nl" target="_blank" rel="noopener noreferrer" aria-label="api.roozen.nl">
 https://api.roozen.nl
 </a>
-

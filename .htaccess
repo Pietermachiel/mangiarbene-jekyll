@@ -1,0 +1,24 @@
+RewriteEngine On
+
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+
+# Canonical HTTPS/non-WWW
+<IfModule mod_rewrite.c>
+	RewriteCond %{HTTPS} off [OR]
+	RewriteCond %{HTTP_HOST} ^www\.home\.roozen\.nl [NC]
+	RewriteRule (.*) https://home\.roozen.nl/$1 [L,R=301]
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# Allow loading of external fonts
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    SetEnvIf Origin "http(s)?://(www\.)?(localhost:3000|api.roozen.nl)$" AccessControlAllowOrigin=$0
+    Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    Header merge Vary Origin
+</IfModule>
+
+

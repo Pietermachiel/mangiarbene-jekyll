@@ -1,4 +1,4 @@
-I"�=<h4 id="talk-at-the-jekyll-video-conference-2019">Talk at the Jekyll video conference 2019</h4>
+I"�=<h4 id="talk-at-the-jekyll-video-conference-2019">Talk at the Jekyll video conference 2019</h4>
 
 <blockquote>
   <p>One of the best so called <strong>unconventional use cases of Jekyll</strong> is learning the basics of web development: HTML, CSS and JavaScript. At least in my case as a book designer with a non development background. But if your JavaScript part is growing in your application, you might be attempted to use React or other single page applications in JavaScript. Although it is not impossible to integrate React in Jekyll, it doesn’t make much sense to use two website generators at the same time. Aside from the caveats in development you will encounter. Yet we don’t have to say goodbye to Jekyll at this point at all.</p>
@@ -13,7 +13,7 @@
 <h1 id="hello">Hello,</h1>
 
 <div class="home-img_pieter">
-    <img src="/public/img/pieter0.jpg" alt="" />   
+    <img src="/img/pieter0.jpg" alt="" />   
 </div>
 
 <p><strong>…my name is Pieter Roozen. I am a graphic designer and I live in The Hague, the Netherlands. I am 65 years old, father of 4 and partner of Ruth. I love skitouring and sailing and I bake sourdough bread on a daily basis.</strong></p>
@@ -21,7 +21,7 @@
 <p><br /></p>
 
 <div class="home-img_vangogh">
-    <img src="/public/img/studio.jpg" alt="" />   
+    <img src="/img/studio.jpg" alt="" />   
 </div>
 
 <h2 id="studio-roozen">Studio Roozen</h2>
@@ -59,8 +59,8 @@
 <p>For this demo I designed a simple Jekyll website about Cookbooks (what else…? :-) called <strong>MangiarBene</strong>, dedicated to the famous Italian businessman and writer Pellegrino Artusi (1820–1911), and which in this case is the actual website you are visiting right now. It consists of two collections: one of <strong>15 cookbooks</strong> and another of <strong>48 recipes</strong> as well as a <strong>blog</strong> from which this actual post is the ‘latest’.</p>
 
 <div class="home-img_websites">
-    <img src="/public/img/jekyll.jpg" alt="" />
-    <img src="/public/img/react.jpg" alt="" />
+    <img src="/img/jekyll.jpg" alt="" />
+    <img src="/img/react.jpg" alt="" />
 </div>
 
 <p>You can go to the <a href="/">homepage</a> of <strong>MangiarBene</strong> now, if you want, and see how the website is structured.</p>

@@ -18,44 +18,48 @@
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: rgba(255,255,255,0.5) 2px 3px 6px;
+  text-shadow: rgba(255, 255, 255, 0.5) 2px 3px 6px;
 }
-
 
 // brand
 
-.brand{
+.brand {
   color: $brand;
 }
 
 // background
 
-.background{
+.background {
   color: $background;
 }
 
 // text-color
 
-.text-color{
+.text-color {
   color: $text-color;
 }
 
 // zwart
 
 .zwart {
-  color: $zwart !important; 
+  color: $zwart !important;
 }
 
 // paars
 
 .paars {
-  color: $paars; 
+  color: $paars;
 }
 
 // blauw
 
 .blauw {
-  color: $blauw; 
+  color: $blauw;
 }
 
-
+.geel {
+  color: yellow;
+}
+.bg-geel {
+  background: yellow;
+}

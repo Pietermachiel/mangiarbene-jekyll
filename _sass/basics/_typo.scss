@@ -3,8 +3,8 @@
 \*------------------------------------*/
 
 body {
-    background-color: $background ; // #f6f6f6
-    color: #333;
+  background-color: $background; // #f6f6f6
+  color: #333;
 }
 
 img {
@@ -25,11 +25,10 @@ img {
 }
 
 a {
-    color: $blauw;
-    text-decoration: none;
-    transition: .1s;
+  color: $blauw;
+  text-decoration: none;
+  transition: 0.1s;
 }
-
 
 button {
   padding: 18px;
@@ -37,31 +36,42 @@ button {
   margin-top: 2em;
 }
 .btn {
-    display: inline-block;
-    border-radius: 2px;
-    -webkit-appearance: none;
-    padding: 12px 21px;
-    margin-top: 2em;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.05em;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: #eee;
-    border: 1px solid #e6e6e6;
-    border-bottom: 2px solid #c3c3c3;
-    // color: #333;
-    text-decoration: none;
+  display: inline-block;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  padding: 12px 21px;
+  margin-top: 2em;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #eee;
+  border: 1px solid #e6e6e6;
+  border-bottom: 2px solid #c3c3c3;
+  // color: #333;
+  text-decoration: none;
 }
 .btn:hover {
   border: 1px solid #c3c3c3;
   border-bottom: 2px solid #c3c3c3;
-  background-color: #F7F6F6;  
+  background-color: #f7f6f6;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5em;
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
   line-height: 1.2;
 }
 
@@ -70,36 +80,41 @@ button {
 //   margin-bottom: .5em;
 // }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 3rem;
   font-weight: 600;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 3rem;
   font-weight: 200;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 2rem;
   font-weight: 600;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 2rem;
   font-weight: 200;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 1.5rem;
   font-weight: 200;
 }
-
 
 p {
   font-weight: 400;
@@ -112,7 +127,6 @@ b {
   font-size: 1em;
 }
 
-
 li {
   list-style: none;
 }
@@ -123,4 +137,8 @@ li {
 
 .mb-0 {
   margin-bottom: 0;
+}
+
+.smaller {
+  font-size: smaller;
 }

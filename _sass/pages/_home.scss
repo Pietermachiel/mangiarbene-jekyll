@@ -1,104 +1,108 @@
 /*------------------------------------*\
   #PAGES-HOME   
 \*------------------------------------*/
+.demo {
+  background: yellow;
+  padding: 18px;
+}
 .home-img_artisjok {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: center;
-	margin-bottom: 2em;
-	img {
-		width: 60px;
-		border-radius: 50%;
-	}
-	.theart {
-		color: $brand;
-		p {
-			border-bottom: 1px solid rgb(173, 173, 173);
-			padding-top: 16px;			
-			font-weight: 300;
-		}
-		a {
-			border-bottom: 1px solid silver;
-			line-height: 18px;
-			display: inline-block;
-			padding-bottom: 2px;
-			margin-left: 1em;
-			// padding-top: 16px;			
-			font-weight: 400;
-			color: $brand;
-		}
-	}
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2em;
+  img {
+    width: 60px;
+    border-radius: 50%;
+  }
+  .theart {
+    color: $brand;
+    p {
+      border-bottom: 1px solid rgb(173, 173, 173);
+      padding-top: 16px;
+      font-weight: 300;
+    }
+    a {
+      border-bottom: 1px solid silver;
+      line-height: 18px;
+      display: inline-block;
+      padding-bottom: 2px;
+      margin-left: 1em;
+      // padding-top: 16px;
+      font-weight: 400;
+      color: $brand;
+    }
+  }
 }
 .home-img_pieter {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: center;
-	margin-bottom: 2em;
-	img {
-		width: 200px;
-		border-radius: 50%;
-	}
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2em;
+  img {
+    width: 200px;
+    border-radius: 50%;
+  }
 }
 .home-img_vangogh,
 .home-img_websites {
-	@media screen and (min-width: $on-palm){  
-		margin-left: calc(-200% + 769px);
-		margin-right: calc(-200% + 769px);
-		margin-bottom: 2em;
-		img {
-			width: 100%;
-		}
-	}
+  @media screen and (min-width: $on-palm) {
+    margin-left: calc(-200% + 769px);
+    margin-right: calc(-200% + 769px);
+    margin-bottom: 2em;
+    img {
+      width: 100%;
+    }
+  }
 }
 .home-quote {
-	margin-bottom: 2rem;
-	font-family: $mono;
-	p.pellegrino {
-		font-family: $sans;
-		font-size: 16px;
-		margin-bottom: 48px;
-	}
-	span {
-		color: $brand;
-		border-bottom: 1px solid rgb(173, 173, 173);
-		padding-bottom: 1px;
-	}
+  margin-bottom: 2rem;
+  font-family: $mono;
+  p.pellegrino {
+    font-family: $sans;
+    font-size: 16px;
+    margin-bottom: 48px;
+  }
+  span {
+    color: $brand;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    padding-bottom: 1px;
+  }
 }
 
 .home-database {
-	margin-bottom: 2rem;
-	h3 {
-		color: $zwart;
+  margin-bottom: 2rem;
+  h3 {
+    color: $zwart;
     font-weight: 300;
     margin-bottom: 18px;
-	}
-	p {
-		font-size: 21px;
-		font-weight: 300;
-		margin-bottom: 1em;
-	}
+  }
+  p {
+    font-size: 21px;
+    font-weight: 300;
+    margin-bottom: 1em;
+  }
 }
 
 .home-post {
-	margin-bottom: 2rem;
-	h3 {
-		color: $zwart;
+  margin-bottom: 2rem;
+  h3 {
+    color: $zwart;
     font-weight: 300;
     margin-bottom: 0;
-	}
-	p {
-		font-size: 21px;
-		font-weight: 300;
-		margin-bottom: 1em;
-	};
+  }
+  p {
+    font-size: 21px;
+    font-weight: 300;
+    margin-bottom: 1em;
+  }
 }
 
 .home-recipe {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .home-book {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }

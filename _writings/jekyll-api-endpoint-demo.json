@@ -3,7 +3,7 @@ title: Jekyll API endpoint demo
 date: 16-09-21
 layout: layout-writings
 category: Development
-url: "https://trim-seahorse.cloudvent.net"
+url: "https://mangiarbene.roozen.nl"
 author: Pieter Roozen
 source: ""
 source_url: ""
@@ -20,7 +20,7 @@ source_url: ""
 # Hello,
 
 <div class="home-img_pieter">
-    <img src="/public/img/pieter0.jpg" alt="">   
+    <img src="/img/pieter0.jpg" alt="">   
 </div>
 
 **...my name is Pieter Roozen. I am a graphic designer and I live in The Hague, the Netherlands. I am 65 years old, father of 4 and partner of Ruth. I love skitouring and sailing and I bake sourdough bread on a daily basis.**
@@ -28,7 +28,7 @@ source_url: ""
 <br/>
 
 <div class="home-img_vangogh">
-    <img src="/public/img/studio.jpg" alt="">   
+    <img src="/img/studio.jpg" alt="">   
 </div>
 
 ## Studio Roozen
@@ -66,8 +66,8 @@ I know that there are different solutions out there, to use fake online API' for
 For this demo I designed a simple Jekyll website about Cookbooks (what else...? :-) called **MangiarBene**, dedicated to the famous Italian businessman and writer Pellegrino Artusi (1820–1911), and which in this case is the actual website you are visiting right now. It consists of two collections: one of **15 cookbooks** and another of **48 recipes** as well as a **blog** from which this actual post is the 'latest'.
 
 <div class="home-img_websites">
-    <img src="/public/img/jekyll.jpg" alt="">
-    <img src="/public/img/react.jpg" alt="">
+    <img src="/img/jekyll.jpg" alt="">
+    <img src="/img/react.jpg" alt="">
 </div>
 
 You can go to the [homepage](/) of **MangiarBene** now, if you want, and see how the website is structured. 

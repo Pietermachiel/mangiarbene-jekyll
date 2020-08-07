@@ -1,4 +1,4 @@
-I"°L<h4 id="talk-at-the-jekyllconf-2019">Talk at the JekyllConf 2019</h4>
+I"ÕI<h4 id="talk-at-the-jekyllconf-2019">Talk at the JekyllConf 2019</h4>
 
 <blockquote>
   <p>One of the best so called <strong>unconventional use cases of Jekyll</strong> is learning the basics of web development: HTML, CSS and JavaScript. At least in my case as a book designer with a non development background. But if the JavaScript part is growing in your application, you might be attempted to use React or other single page applications in JavaScript. Although it is not impossible to integrate React in Jekyll, it doesnâ€™t make much sense to use two website generators at the same time. Even aside from the issues in development you may encounter. Yet we donâ€™t have to say goodbye to Jekyll at this point at all.</p>
@@ -82,26 +82,22 @@ https://api.roozen.nl
 <p>In Jekyll it is possible to relate collections and posts from the content of the YAML front matter blocks. We can call the <strong>recipes</strong> and ad the book data to each recipe:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"book-links"</span><span class="nt">&gt;</span>
-    {% for recipe in site.recipes %}
-    {% if recipe.book == page.title %}
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/recipes/{{ recipe.title | slugify }}"</span><span class="nt">&gt;</span>
+  {% for recipe in site.recipes %} {% if recipe.book == page.title %}
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/recipes/{{ recipe.title | slugify }}"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h5&gt;</span>{{ recipe.title }} {{ recipe.index }}<span class="nt">&lt;/h5&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-    {% endfor %}    
+  <span class="nt">&lt;/a&gt;</span>
+  {% endif %} {% endfor %}
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 
 <p>Likewise we can call the <strong>books</strong> and add the recipes that belong to a book:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"recipe-box_credits"</span><span class="nt">&gt;</span>
-    {% for recipe in site.recipes %}
-    {% if recipe.book == page.title %}
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/recipes/{{ recipe.title | slugify }}"</span><span class="nt">&gt;</span>
+  {% for recipe in site.recipes %} {% if recipe.book == page.title %}
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/recipes/{{ recipe.title | slugify }}"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h5&gt;</span>{{ recipe.title }} {{ recipe.index }}<span class="nt">&lt;/h5&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-    {% endfor %}   
+  <span class="nt">&lt;/a&gt;</span>
+  {% endif %} {% endfor %}
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 
@@ -120,28 +116,18 @@ https://api.roozen.nl
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 layout: null
 ---
-[ 
-  {% assign recipes = site.recipes | sort: "index" %}
-  {% for recipe in recipes %}
-      {
-          "index": "{{ recipe.index }}",
-          "title": "{{ recipe.title }}",
-          "id": "{{ recipe.slugify }}",
-          "product": "{{ recipe.product }}",
-          "dish": "{{ recipe.dish }}",
-          "url": "{{ recipe.url }}",
-          "bookId"  : "{{ recipe.book | slugify }}",
-          "bookTitle"  : "{{ recipe.book }}",          
-          "page": "{{ recipe.page }}"
-      },
-]
+
+[ {% assign recipes = site.recipes | sort: "index" %} {% for recipe in recipes
+%} { "index": "{{ recipe.index }}", "title": "{{ recipe.title }}", "id": "{{
+recipe.slugify }}", "product": "{{ recipe.product }}", "dish": "{{ recipe.dish
+}}", "url": "{{ recipe.url }}", "bookId" : "{{ recipe.book | slugify }}",
+"bookTitle" : "{{ recipe.book }}", "page": "{{ recipe.page }}" }, ]
 </code></pre></div></div>
 
 <p>There is only one problem here. The JSON object code block ends with a comma, so the last recipe also will end with a comma. JSON, however, disallows trailing commas. Now, in Liquid, you can eliminate the last comma, with the <strong>unless forloop.last</strong> statement.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          "page": "{{ recipe.page }}"
-      }{% unless forloop.last %},{% endunless %}{% endfor %}
-]
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"page": "{{ recipe.page }}" }{% unless forloop.last %},{% endunless %}{% endfor
+%} ]
 </code></pre></div></div>
 
 <h2 id="a-flat-json-tree">A flat JSON tree</h2>
@@ -150,21 +136,9 @@ layout: null
 
 <h6 id="httpstrim-seahorsecloudventnetapirecipesjson">https://trim-seahorse.cloudvent.net/api/recipes.json</h6>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-[
-    {
-    index: "1",
-    title: "Candied citrus peel",
-    id: "candied-citrus-peel",
-    product: "lemon",
-    dish: "basics",
-    url: "/recipes/candied-citrus-peel/",
-    bookId: "30-ingredients",
-    bookTitle: "30 ingredients",
-    page: "160"
-    },
-...
-
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ { index: "1", title: "Candied citrus peel", id: "candied-citrus-peel",
+product: "lemon", dish: "basics", url: "/recipes/candied-citrus-peel/", bookId:
+"30-ingredients", bookTitle: "30 ingredients", page: "160" }, ...
 </code></pre></div></div>
 
 <h2 id="nested-structures">Nested structures</h2>
@@ -186,45 +160,24 @@ layout: null
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 layout: null
 ---
-[ 
-    {% for book in site.books %}
-        {
-            "title"    : "{{ book.title }}",
-            "author"   : "{{ book.author }}",
-            "publisher": "{{ book.publisher }}",
-            "year"     : "{{ book.year }}",
-            "kitchen"  : "{{ book.kitchen }}",
-            "link"     : "{{ book.link }}",
-            "book_url" : "{{ book.book_url }}",
-            {% assign p = book.title | slugify %}
-            {% assign my_recipe = "" | split: "" %}
-            {% for recipetitle in site.recipes %}
-            {% assign detitel = recipetitle.book | slugify %}
-            {% if p == detitel %}
-            {% assign itemtitle = "" | split: "" %}
-            {% assign itemtitle = itemtitle | push: recipetitle %}
-            {% assign my_recipe = my_recipe | push: itemtitle %}
-            {% endif %}
-            {% endfor %}
-            "recipes"  : [ 
-                {% for therecipe in my_recipe %}  
-                {
-                    "index"   : "{{ therecipe[0].index }}",
-                    "title"   : "{{ therecipe[0].title }}",
-                    "page"    : "{{ therecipe[0].page }}",
-                    "product" : "{{ therecipe[0].product }}",
-                    "dish"    : "{{ therecipe[0].dish }}"
-                }{% unless forloop.last %},{% endunless %}
-                {% endfor %}
-            ],
-            "text"  : "{{ book.text }}",
-            "content"  : {{ book.content | jsonify }}
-        }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-]
+
+[ {% for book in site.books %} { "title" : "{{ book.title }}", "author" : "{{
+book.author }}", "publisher": "{{ book.publisher }}", "year" : "{{ book.year
+}}", "kitchen" : "{{ book.kitchen }}", "link" : "{{ book.link }}", "book_url" :
+"{{ book.book_url }}", {% assign p = book.title | slugify %} {% assign my_recipe
+= "" | split: "" %} {% for recipetitle in site.recipes %} {% assign detitel =
+recipetitle.book | slugify %} {% if p == detitel %} {% assign itemtitle = "" |
+split: "" %} {% assign itemtitle = itemtitle | push: recipetitle %} {% assign
+my_recipe = my_recipe | push: itemtitle %} {% endif %} {% endfor %} "recipes" :
+[ {% for therecipe in my_recipe %} { "index" : "{{ therecipe[0].index }}",
+"title" : "{{ therecipe[0].title }}", "page" : "{{ therecipe[0].page }}",
+"product" : "{{ therecipe[0].product }}", "dish" : "{{ therecipe[0].dish }}" }{%
+unless forloop.last %},{% endunless %} {% endfor %} ], "text" : "{{ book.text
+}}", "content" : {{ book.content | jsonify }} }{% unless forloop.last %},{%
+endunless %} {% endfor %} ]
 </code></pre></div></div>
 
-<p>Finally we have to check if the JSON-file is valid at: 
+<p>Finally we have to check if the JSON-file is valid at:
 <a href="https://jsonlint.com/" target="_blank" rel="noopener noreferrer">
 https://jsonlint.com/
 </a>.</p>
@@ -245,39 +198,21 @@ https://jsonlint.com/
 
 <h6 id="_configyml">_config.yml</h6>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>collections:
-  writings:
-    output: true
-    permalink: /api/blog/:path.json
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "writings"
-    values:
-      layout: layout-writings
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>collections: writings: output: true permalink: /api/blog/:path.json defaults: -
+scope: path: "" type: "writings" values: layout: layout-writings
 </code></pre></div></div>
 
 <p>In doing so, we will lose all the typical behavior of the post format in Jekyll, such as the date format and the support for categories and tags. But in the targeted JavaScript environment this would not work anyway. Besides, in JavaScript you can deal with these topics even more easy than in Jekyll :-).</p>
 
 <h6 id="httpstrim-seahorsecloudventnetapiblogjekyll-api-endpoint-demojson">https://trim-seahorse.cloudvent.net/api/blog/jekyll-api-endpoint-demo.json</h6>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-index: "1",
-title: "Jekyll API endpoint demo",
-id: "jekyll-api-endpoint-demo",
-date: "2019-08-21 00:00:00 +0000",
-author: "Pieter Roozen",
-category: "Development",
-book: "",
-source: "",
-source_url: "",
-content: "#### Talk at the Jekyll video conference 2019 &gt; One of the best
-...
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ index: "1", title: "Jekyll API endpoint demo", id: "jekyll-api-endpoint-demo",
+date: "2019-08-21 00:00:00 +0000", author: "Pieter Roozen", category:
+"Development", book: "", source: "", source_url: "", content: "#### Talk at the
+Jekyll video conference 2019 &gt; One of the best ...
 </code></pre></div></div>
 
-<p>As you can see, in the content the Markdown tags are still existant, because in Jekyll only .md-files will convert them to valid HTML. But as I mentioned before, this can be done in React as well, see 
+<p>As you can see, in the content the Markdown tags are still existant, because in Jekyll only .md-files will convert them to valid HTML. But as I mentioned before, this can be done in React as well, see
 <a href="https://github.com/rexxars/react-markdown" target="_blank" rel="noopener noreferrer">
 react-markdown
 </a>.</p>
@@ -286,7 +221,7 @@ react-markdown
 
 <p>Now we can Publish the result on Github and Cloudcannon, which in this case I already did, obviously.</p>
 
-<p>You will find the repositories on 
+<p>You will find the repositories on
 <a href="https://github.com/Pietermachiel" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
 
 <p>Subsequently, we can use the created Jekyll API endpoints. As you can see they are part of the Jekyll website.</p>

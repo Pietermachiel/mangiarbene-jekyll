@@ -1,0 +1,100 @@
+I"<div class="home-img_artisjok">
+    <img src="/img/artisjok_klein.jpg" alt="" />
+    <div class="theart">
+        <a href="/books/science-in-the-kitchen-and-the-art-of-eating-well">The art of eating well</a>
+    </div>       
+</div>
+<div class="home-quote">
+    <p>
+    "Cooking is a troublesome sprite. Often it may drive you to despair. Yet it is also very rewarding, for when you do succeed, or overcome a difficulty in doing so, you feel the satisfaction of a great triumph. <br /><br /> If you do not aspire to become a premier cook, you do not need to have been born with a pan on your head to become a good one. <span>Passion, care, and precision of method will generally suffice; then, of course, you must use the finest ingredients as your raw materials, for these will make you shine.</span>"
+    </p>
+    <br />
+    <p class="pellegrino">    
+        <b>Pellegrino Artusi</b> 
+        <a href="/books/science-in-the-kitchen-and-the-art-of-eating-well" aria-label="The art of eating well">– Science in the Kitchen and the Art of Eating Well</a>
+    </p>
+</div>
+<hr />
+
+<p><br /></p>
+<h3 class="blauw">Note to the reader – <span class="smaller">Jekyll version</span></h3>
+<div class="blog-post kramdown">
+    <blockquote>
+        <p> This website demonstrates Jekyll as API endpoint, accompaning <a href="https://jekyllconf.com/" target="_blank" rel="noopener noreferrer" aria-label="api.roozen.nl">JekyllConf2019</a> on this issue.
+        The content in <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer" aria-label="api.roozen.nl">Jekyll</a> is to be conciderate as fake, exept for the <a href="/development/2019/09/16/jekyll-api-endpoint-demo.html" aria-label="Last post">
+            latest post</a>, which contains the explanation of the demo.. 
+        The fake <strong>recipe</strong> and <strong>book</strong> markup documents are stored as objects as well and made available as REST api endpoints.
+        In Jekyll endpoints it is only possible to use the GET
+            request, which makes sense because Jekyll is a static website
+            generator in the first place. 
+        Consequently there are no dynamic endpoints available, and therefore no possiblilty to change the content this way.
+    </p>
+       </blockquote>
+    <blockquote>
+        <p>The API endpoints can be consumed in a <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" aria-label="api.roozen.nl">Reactjs</a> application. As you will experience and to demonstrate the working and purpose of the API endpoints this React website <strong><a href="https://mangiarbene.roozen.nl" target="_blank" rel="noopener noreferrer" aria-label="mangiarbene.roozen.nl">
+             MangiarBene
+            </a></strong> is designed almost exactly the same way as the Jekyll website. 
+    </p>
+        </blockquote>
+    <blockquote>
+        <p>You will find the explanation of the project in the <a href="/development/2019/09/16/jekyll-api-endpoint-demo.html" aria-label="Last post">
+    latest post</a>.</p>
+    
+</blockquote>
+</div>
+
+<p style="margin-bottom: 2em;"></p>
+<!-- latest post -->
+<p class="pl-2em">latest post</p>
+<div class="home-post"><a href="/development/2019/09/16/jekyll-api-endpoint-demo.html" aria-label="Last post">
+        <h3>Jekyll API endpoint demo</h3>
+    </a>
+    <p class="summary">
+        <span class="date">
+        September 16, 2019
+        </span>
+    </p></div>
+<!-- recipe of the day -->
+<p class="pl-2em">recipe of the day</p>
+<div class="recipe"><a href="/recipes/rocket-in-roasted-beef" aria-label="Recipe of the day">
+        <h3>Rocket in roasted beef 4</h3>
+    </a>
+    <div class="credits">
+        <h5>
+            rocket
+            <span>
+                <a href="/books/30-ingredients">
+                &nbsp;30 ingredients
+                </a>
+            </span>
+        </h5>
+    </div></div>
+<!-- book of the day -->
+<p class="pl-2em">book of the day</p>
+<div class="book"><a href="/books/delia-s-how-to-cook" aria-label="Book of the day">
+        <h3><span>1998</span>&nbsp;Delia's how to cook</h3>
+    </a>
+    <div class="credits">
+        <h5>Delia Smith</h5>
+    </div></div>
+<!-- database -->
+<p class="pl-2em">database</p>
+<div class="home-database">
+<a href="/recipes" class="nav-link" aria-label="Number of recipes">
+    <h3>48 recipes </h3>    
+</a>
+<a href="/books" class="nav-link" aria-label="Number of books">
+    <p>15 books</p>   
+</a>
+</div>
+<p class="pl-2em">api endpoints</p>
+<p><a href="/api/books.json" aria-label="Books">/api/books.json</a>
+<br /><br />
+<a href="/api/recipes.json" aria-label="Recipes">/api/recipes.json</a>
+<br /><br />
+<a href="/api/blog.json" aria-label="Blog">/api/blog.json</a></p>
+<p class="pl-2em">consume in React</p>
+<p><a href="https://api.roozen.nl" target="_blank" rel="noopener noreferrer" aria-label="api.roozen.nl">
+https://api.roozen.nl
+</a></p>
+:ET
